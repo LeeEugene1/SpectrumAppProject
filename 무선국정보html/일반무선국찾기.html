@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)http://localhost:8080/cop/bbs/selectBoardList.do?menuNo=10401&bbsId=BBSMSTR_000000000072&gubun=1&pageUnit=10&pageSize=4 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<title>무선국</title>
+
+<meta name="naver-site-verification" content="c78ee067d840dae93c07d6aecd84f982a4a142ff">
+<meta name="description" content="전파정보, 스펙트럼맵, 전파정보활용시스템, 한국방송통신전파진흥원, 주파수 이용현황, 무선국정보, 통계 ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="스펙트럼맵">
+<meta property="og:description" content="전파정보 개방시스템(전파누리)">
+<meta property="og:image" content="https://www.spectrummap.kr/images/kca/logo.png">
+<meta property="og:url" content="https://www.spectrummap.kr">
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:8080/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:8080/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="http://localhost:8080/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://www.spectrummap.kr/">
+<link type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/basic.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/common.css">
+<link type="text/css" rel="stylesheet" href="css/main.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/kca.css" media="screen">
+<link rel="stylesheet" href="css/chunk.css">
+<!-- <link type="text/css" rel="stylesheet" href="/css/msp/academy.css?ver=20200309"> -->
+<!-- <link type="text/css" rel="stylesheet" href="/css/com.css?ver=20200313" /> -->
+
+<script type="text/javascript" src="css/jquery.min.js"></script>
+<script type="text/javascript" src="css/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="css/responsiveslides.min.js"></script>
+<script type="text/javascript" src="css/common.js"></script>
+<script type="text/javascript" src="css/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="css/common.js(1)"></script>
+<script type="text/javascript" src="css/common_new.js"></script>
+
+<!-- <script type="text/javascript" src="/js/gis_common.js"></script> -->
+<script defer>
+	function newOption() {
+	  const wrap = document.getElementById("newSearchCondition");
+	  const text = document.getElementById("newText");
+	  if(wrap.style.display === "none"){
+		  wrap.style.display = "block";
+		  text.textContent="검색조건 접기";
+	  }else{
+		  wrap.style.display = "none";
+		  text.textContent="검색조건 펼치기";
+	  }
+	}
+ </script>
+</head>
+<body>
+<div id="wrap">
+	<header class="section" id="section0" style="border-top:0px;">
+		<!-- 2020-06-26 이유진 head 새로만듬 -->
+			<!-- 2020-06-26 이유진 top_menu 수정-->
+			<div class="top_menu">
+			<ul>
+				<li><a href="http://localhost:8080/mobile/m_index.do?submain=&amp;from=mobile#none" class="bf00 on" submain="1" onclick="homeBtn(); return false;"> &lt; </a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=1" class="bf01" submain="1">아카데미</a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=2" class="bf02" submain="2">주파수</a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=3" class="bf03" submain="3">무선국</a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=4" class="bf04" submain="4">전파LAB</a></li>
+				<li><a href="" class="newTopMenuselected">전파한마당</a></li>
+			</ul>
+			</div>
+			<!-- 2020-07-02 이유진 2단메뉴 수정-->
+			<div class="new_menu2">
+				<ul>
+					<li class="newMenu2selected"><a href="">일반 무선국 찾기</a></li>
+				</ul>
+			</div>
+			<div class="new_search">
+				<ul>
+					<li onclick="newOption()"><a href="#" id="newText">검색조건 접기</a></li>
+					<!-- 2020-07-03 이유진 검색조건 -->
+					<div id="newSearchCondition">
+						<div>
+							<div class="ant-tabs ant-tabs-top ant-tabs-card ant-tabs-no-animation">
+								<div
+									role="tablist"
+									class="ant-tabs-bar ant-tabs-top-bar ant-tabs-card-bar"
+									tabindex="0">
+									<!-- <div class="ant-tabs-nav-container">
+										<span
+											unselectable="unselectable"
+											class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled">
+											<span class="ant-tabs-tab-prev-icon">
+												<i
+													aria-label="icon: left"
+													class="anticon anticon-left ant-tabs-tab-prev-icon-target">
+													<svg
+														viewBox="64 64 896 896"
+														focusable="false"
+														class=""
+														data-icon="left"
+														width="1em"
+														height="1em"
+														fill="currentColor"
+														aria-hidden="true">
+														<path
+															d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path>
+													</svg>
+												</i>
+											</span>
+										</span>
+										<span
+											unselectable="unselectable"
+											class="ant-tabs-tab-next ant-tabs-tab-btn-disabled">
+											<span class="ant-tabs-tab-next-icon">
+												<i
+													aria-label="icon: right"
+													class="anticon anticon-right ant-tabs-tab-next-icon-target">
+													<svg
+														viewBox="64 64 896 896"
+														focusable="false"
+														class=""
+														data-icon="right"
+														width="1em"
+														height="1em"
+														fill="currentColor"
+														aria-hidden="true">
+														<path
+															d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+													</svg>
+												</i>
+											</span>
+										</span>
+										 <div class="ant-tabs-nav-wrap"> <div class="ant-tabs-nav-scroll"> <div
+										class="ant-tabs-nav ant-tabs-nav-animated"> <div> <div role="tab"
+										aria-disabled="false" aria-selected="true" class="ant-tabs-tab-active
+										ant-tabs-tab">주소 검색</div> <div role="tab" aria-disabled="false"
+										aria-selected="false" class=" ant-tabs-tab">허가번호 검색</div> </div> <div
+										class="ant-tabs-ink-bar ant-tabs-ink-bar-no-animated" style="display: block;
+										transform: translate3d(0px, 0px, 0px); width: 94px;"></div> </div> </div> </div>
+										-->
+									<!-- </div> -->
+								</div>
+								<div
+									tabindex="0"
+									role="presentation"
+									style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+								<div
+									class="ant-tabs-content ant-tabs-content-no-animated ant-tabs-top-content ant-tabs-card-content">
+									<div
+										role="tabpanel"
+										aria-hidden="false"
+										class="ant-tabs-tabpane ant-tabs-tabpane-active">
+										<div
+											tabindex="0"
+											role="presentation"
+											style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+										<div title="주소 검색" tabindex="0">
+											<div style="margin: -10px 0px 10px;">
+												<div
+													class="ant-select-lg ant-select-lg ant-select-show-search ant-select-auto-complete ant-select ant-select-combobox ant-select-enabled"
+													style="width: 100%;">
+													<div
+														class="ant-select-selection ant-select-selection--single"
+														role="combobox"
+														aria-autocomplete="list"
+														aria-haspopup="true"
+														aria-controls="6b226104-38a3-4baa-aa0a-a36d94be38fa"
+														aria-expanded="false">
+														<div class="ant-select-selection__rendered">
+															<div
+																unselectable="on"
+																class="ant-select-selection__placeholder"
+																style="display: block; user-select: none;">위치를 검색해주세요. (예시: 여의도 또는 여의도동)</div>
+															<ul>
+																<li class="ant-select-search ant-select-search--inline">
+																	<div class="ant-select-search__field__wrap">
+																		<span class="ant-select-search__field ant-input-affix-wrapper">
+																			<input type="text" class="ant-input" value="">
+																				<span class="ant-input-suffix">
+																					<i
+																						aria-label="icon: search"
+																						class="anticon anticon-search certain-category-icon">
+																						<svg
+																							viewBox="64 64 896 896"
+																							focusable="false"
+																							class=""
+																							data-icon="search"
+																							width="1em"
+																							height="1em"
+																							fill="currentColor"
+																							aria-hidden="true">
+																							<path
+																								d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path>
+																						</svg>
+																					</i>
+																				</span>
+																			</span>
+																			<span class="ant-select-search__field__mirror">&nbsp;</span>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+															<span class="ant-select-arrow" unselectable="on" style="user-select: none;">
+																<i aria-label="icon: down" class="anticon anticon-down ant-select-arrow-icon">
+																	<svg
+																		viewBox="64 64 896 896"
+																		focusable="false"
+																		class=""
+																		data-icon="down"
+																		width="1em"
+																		height="1em"
+																		fill="currentColor"
+																		aria-hidden="true">
+																		<path
+																			d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+																	</svg>
+																</i>
+															</span>
+														</div>
+													</div>
+													<div
+														class="ant-radio-group ant-radio-group-outline"
+														style="text-align: right; width: 100%; margin-top: 5px;">
+														<label class="ant-radio-button-wrapper ant-radio-button-wrapper-checked">
+															<span class="ant-radio-button ant-radio-button-checked">
+																<input type="radio" class="ant-radio-button-input" value="address" checked="">
+																	<span class="ant-radio-button-inner"></span>
+																</span>
+																<span>주소검색</span>
+															</label>
+															<label class="ant-radio-button-wrapper">
+																<span class="ant-radio-button">
+																	<input type="radio" class="ant-radio-button-input" value="keyword">
+																		<span class="ant-radio-button-inner"></span>
+																	</span>
+																	<span>명칭검색</span>
+																</label>
+															</div>
+														</div>
+														<div class="ant-row ant-form-item">
+															<div class="ant-col ant-form-item-control-wrapper">
+																<div class="ant-form-item-control">
+																	<span class="ant-form-item-children">
+																		<h3 style="margin-bottom: 0px; margin-top: 0px;">서비스
+																			<div style="float: right; margin-left: auto;">
+																				<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																					<span class="ant-checkbox ant-checkbox-checked">
+																						<input type="checkbox" class="ant-checkbox-input" value="" checked="">
+																							<span class="ant-checkbox-inner"></span>
+																						</span>
+																						<span>전체 선택</span>
+																					</label>
+																				</div>
+																			</h3>
+																			<div class="ant-checkbox-group" name="service_code_list" style="width: 100%;">
+																				<div class="ant-row">
+																					<div class="ant-col ant-col-12">
+																						<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																							<span class="ant-checkbox ant-checkbox-checked">
+																								<input
+																									name="service_code_list"
+																									type="checkbox"
+																									class="ant-checkbox-input"
+																									value="05,06"
+																									checked="">
+																									<span class="ant-checkbox-inner"></span>
+																								</span>
+																								<span>
+																									<img
+																										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA4CAYAAACPKLr2AAAHvUlEQVRoQ82Ze3BU1R3Hv7+7m/dzd0NCQggphAACFYOD8nA3aUCcUaRUsDUObRkqtAI67VSLjcneDaLWdurY+qg4dKqW4KOlFCodHmmy2yitowiaEFKgPEVIsndDIJuEbO7pnLvs5rGve/PY6fknd+f+Hp/7O+f8zu/8QhjOWPdJTEbOtYV9EBYTQxGAaQCyACTdNNcJ4AqAZkY4ooN8qO1SyofYdnuvVnekRWGcWFvgYcLjRHgIDCYtuiA4GcNOPckvtYolp9TqqgI0lddMgF7/AgO+DUCn1ngIuT4C3oXH86Rza+mXkWxFBDRU2tcT4ZcAUiIZ0/j+GmN4wlVleT2cXkjA3B9/lOBO9WwH2EMaHWsUp52JHfq1F19c0BVMMSig4WcH0yg+7m8AW6TR2zDFqZ5199zn+sWSq0MNBADmiJ8kdjP3/ujB+ZCoPp4Sl14Sb3cPhAwANIqO98DYqmGGYmRqRO9LovnBkICmSvsGRnh5ZF5Gpk0MG51Vllf8cfU9GMvtE6HHcQDJI3MxYu3r8OAWaavlArfkn2Kj1VE99jtWLTztlGzmMj+g6Wn7DKZHI1g/sFpTauQSYgQY4vVw98ro6PFAZhG0CIw8mOl8xtKkRNAkOl5ljP0olJohQY/7Cg2YMz4JpkQ9rt+Q8dlXnfjzcSfauz0BajqBcE9BOpZPM2LuhGSkxfUfPr19DE1tXXjraAt2n5BCkhLRa07R/Chh0744ozHpKwCGYNJri7LwkwXZiNMJAa+lLg/W7D6Fxpb+zDAtIwG/XpoP/jfceKH+S2z7lNcTIYdLkjqzySTWLmZMOBhKbPNdE/CDoiwcvdyJ2jNX0e1hME9KxcI878l3xtWDpW83KtN2y7hEVK+ciuRYb8Qc5zrwXkMbPr/ixvUbfYjREfLT47EoLwV7miVFN9wgkpeQyWp/jgGbQwlmJcdgdmYiDv13cJL/3bIpWDw5TVG7v/oEmp1d2Fs2HYUmb+SerjmPdxra1CzR0NMMPE9Gq30/gLu1WvrenExUWHIVte//5RSSYgW8cu9k5ff7jU48deicVpPB5A+Q0eo4C7BJWq1Ziydi9a3jFDXL7xuw8Y5srJrpLREfeLcZxy7zmnWkg87xCHJLiVpMTTHGY0/ZdGXjHL5wDat3ncSbK6b61+Wc144pa843clJi8cHDMwJcfOdP/0FzW9Aixifr5oCRstIgw+OTY1C9shB5aXFKXlux8wROu7rxhxUFWJSXqsjOf+MLtLr7q/vc1FjUrZkVALisuglNrWEBoQkwOyUWOx6YqsB5ZIb1e0/DfrZDcfxsaR4enJWhPG/adwZ/P+nyA/G8mJ0co/xeOdOEjfOylWe1gNcHXHZCzvT0jARsX14Avqs7b/RhwwdnUH/eC8dH6eQ0vL5sivJ8vNWtrEOelIeONbdlotzs3VwqADvJKNY1gNHMcGuQ5zy+Q3l+a+nsxSN7Tg9KzlxXIGBv2Qx/guY584kD5wJOGk2AxBp5HvwjAx4OBVg2OwN8x/Jp4smY57a2AeuL6/F1dPB0OwqM8XhnVSHS4/WKOR7pfSfb0dDiRlevjORYAfcWGjA3x1swRYogATvIJNY9xhi9FAwwJU6Hz354a7jgKu92NTnx5AFv3stPj8MzpXm4MzfyHWvZjiblXA41iNjjlF5hv00QcCSYEK9CXrznaxEBeap582jLILlZmYmw5Kcqx58xQY9YHSlFxsWOHmV51J+/hvNXwx91sowiAhhP1vzzJ0Ykia7ABclmnqSUWwbR8RtibFN0/Yf3xoh+6xLNjymAxoq6+RDoo/8nQMhsgbSl+PCAkr/uKECRd0RUvoIdk2zFc7grP6BBrHuUGPlvU1HhCOGEEdvgEotfHQQ4TqxN7oNwVnPXarS/hODUQc5vFUv4CTf4kmS01lUCZBttn9rsMatkK67y6QzqLKSLtekCE84C8JbK0R9XZZLz28WS9qCAyo6udFSAmP8LosrIqFKqMm8Z6DOgN5P10/1JvUnxvAM6PqpwwOWYzu6CK79aOqgUD9p+M1bWPQKibVEFZGydVFX8xlCfwRuYIhOMcHwMhrlRgSR8KsE8DyLJ6gB5t6Hin3cwnXx4rNohfhDe5ugT5ju33PXvYMEI26M2Wu28f7xujKO4TbJZ1ofyEQHwX6lATxOAnDGCvATEzZBsd/bfHYY4itjlzxDt98sMfx0LQIGwvE207AlnOyIgVzaIjreIsdWjCcmI3naJ5u9GsqkOUOn6x34xikXtBdZ9Y3awrr7qXTxUMKOyrkQWqGbEu5rABJmVtlUV10aKHn+vKoI+QwarYyuB/VyN4VAyDPSsy2YuV2tDEyDEWr0RggMM89U6GCRHOCxBNkMsCWzLhjCoDZAXE9baXIJwhAHe1pbKQUArg1wk2UouqlRRxDQDciWTaP8GY+Bd2cC+cHDvMhGWOEXLP7TADRtQST1W+2YCnlPjkAFPuWyW59XIDnsXBxpnZLDadxHom+EcM7DdLpvlWwBpavP5bA5rin3Kyj2GCR8C+HoIyM91JC/03S+iHEGvu/TymkmCXv8xgMwhAC2yxzOvfWvpiJrVI4qgD+jmxb8GgO+fI12QWSm/eA8nagN1RgWQG7xZVGznzwJhbaQiQC34qAGqdahV7n+sgLC7bLdZSQAAAABJRU5ErkJggg=="
+																										alt=""
+																										style="width: 24px; height: 33px; margin-right: 4px;">
+																										2G
+																									</span>
+																								</label>
+																							</div>
+																							<div class="ant-col ant-col-12">
+																								<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																									<span class="ant-checkbox ant-checkbox-checked">
+																										<input
+																											name="service_code_list"
+																											type="checkbox"
+																											class="ant-checkbox-input"
+																											value="15"
+																											checked="">
+																											<span class="ant-checkbox-inner"></span>
+																										</span>
+																										<span>
+																											<img
+																												src="data:image/png;base64,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"
+																												alt=""
+																												style="width: 24px; height: 33px; margin-right: 4px;">
+																												3G</span>
+																										</label>
+																									</div>
+																									<div class="ant-col ant-col-12">
+																										<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																											<span class="ant-checkbox ant-checkbox-checked">
+																												<input
+																													name="service_code_list"
+																													type="checkbox"
+																													class="ant-checkbox-input"
+																													value="18,19"
+																													checked="">
+																													<span class="ant-checkbox-inner"></span>
+																												</span>
+																												<span>
+																													<img
+																														src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA4CAYAAACPKLr2AAAHdklEQVRoQ82Ze3BU9RXHv+fu5kkS9pGApCHJaIyE1KroUCN0NyEgzgilotSC2hnHFqcqWmesjyZk7wZSLOOMY1t1GutMteVVq2OhRQEh2S1IS4WRAoZUOxAIDJLsbhKSkJDNPZ3f3eyym+zj3rzK+Wv33vP43PO7v/P7/c4ljEZWf5aUnXtp3iCkhcSYA+AmANMBTBly1wPgawDNTDhigPJJ+/nMA6i/Y0BvONJjkCM3FPlZeoYIK8Gw6rEFwcOMLUZSXmuTK77SaqsJ0Fq19xswGjcy8CAAg1bnMfQGCdgGv/95T13luUS+EgKaa1yPE+EVABmJnOm8382M53y19t/Gs4sJmPfsp2m9Wf63AV6pM7BOddqS3mV8rPXVuy5HM4wKaH5hz1RKTfkrwPN1RhulOu3nvv4lvl8u6hzuYARgrvxZeh/37po8uCAS7U+l9MXn5Tt6wyFHAFpk95/AvGKUqRibGdF7Xtn2/ZiA1hrXk0z4zdiijM2aGE95au2vh/Ia/GGpcs2EEV9MwGzVS9wNP2Z76+xnhWFoiC0O9+aJn7FaWWmL12lbFQK0VrtK2IgT4KvAWl1p0UtLkmBONaJ3QEFXvx8KJ7AiMPlR6llvb1IzaJXdbzDzT7QG+9Gc6aCh3O/5bwea2iJLmEEi3FNkwrJZFtyem4GpKVcXn4FBxsn2y3jn84v48KQ3ZkgietMj254grNmZYrFMuQDApAVw3YJ8rLw5O6T6wp4WvP+FJ/T/puw0vHpPIYqtaXHdbdx/DvWHxX4ipnR4vT3XkVVuWMgs7dECt+D6qahfegM6+vwwpRpVk3DA2Tnp2PzAjchIDmTM3dKFrcfacfxiL7qvDCLJQCg0pWJ+fia2N3txytcfNyyRsoisDtcGBl5MBJidnoSPHi6BOc2IOncrqmx5EYBiWHesmhXKXPXeM9h6vD2R2/iAwMtkcbh2Abg7nqZ43X63rAj2wiz861w3qvedwa5HZkcALi4y4fV7r1evvXfCg5c+aRkT3JDxbrI43KcBLojn7eFbciCXz1SHacmmJmSmGLBjVUkE4IaFBVhRGtgi3r+tGUcviD3rWIVaRAaFp/RYrm6wpGL7qllIMUh49uNT2NHsQ0lO2gjAd+67EfPyM1U3t755VH2YoORmJuNvDwUeKFx+8Of/oLk96iYmqNYrAGNWpWQD4f0HZ6lAHzR58PzuwLBFA/z9fUWYn5+l3i976xjaeq/u7vOyktH46DdHAC7d3DSiRA1Xigv41NwZ+GnZDNXm46860DsQyIopxQgxo4UcPt+Nls5+JBskLCk2q9fW7DyFj770hWKJCTQjI0n9/0CpFcKvEK2A3WGHnYgH2Hh3AZaXaDt6rHe3onpoZovCvXzbSYiiPFwevW1aqAJoAOwhi9x4HEylIzwBKJ2WDvH+DBcxZMEy8+7RNhw8ewmHzl3C5vuLIQq1kIZTnfjZ7ha1ZoaLLkDiE6IO/pGBh6IBxroW7R0UukWWVGxdURwq4j1XBrHzyw61UF8eUJCRLOHeYrO6/GkZYgI2kVVufJqZXhsPQOGj0JSC9ZX5uDMvMKPjydJNTWiKM4uJ+BkyrXXdJkk4kshZ+H0xxNX2meolseiLIR4u4vUoL8yCWP4saUaIitB9RUFrV7+a0QNnLuFMZ/ylTlEwhwAWxVrUj0DEa0fOep22AnXTZJbdvyLmNdcOm0gb/don255WAS1rG8sg0afXEiAUvsu7rvxg2Ja/8XOAbrk2IPmo11l+q2AJAZrlxieIKXSa+n+CMvGTPrn8jQjAHLkhYxDSad1dq/F+EoLHAKWwTa4QK1zkIcniaKwByDneMfX5Y4fXWV4btInoLJjkBpPE0mkAgZ3A5EunQkphh1zRERVQndE17rUgDj3BpDIy1XhrbevCY47ozUx/bteUgSmpogN63aTCAReSevqKvn5lccRWPGr7zVLT+GMQ1U8qIPNqb235W8NjRm9gyixZ4D4Exu2TAkk47IVtLmRStAGKbsPav3+bDcrBiWqHhEBEm2NQKvOs+84/oyUjbo/a4nCJ/vHqCc5ivddpfzxWjASA/8gC+psA5E4Q5HkgpcTrvLNrVIDCKFt2fVdh/GUiACXCsnbZvj2e74SfIYSxWXa/S8yPjCckE/3BJ9t+mMinNkC16598bBw3tWe578rN0br6mmfxcMVsuaFcgbRvzLOawJLCle215Q2Jsifua8pg0JHZ4a4j8M+1OI6lw6Bf+Jy2Kq0+dAFCbjBaILnBKNMaIEKPcNALxQa5IvKwHMeZPkCxmXA05BGkIwzk6IEkoI2hzPE6K1p12ulRD+haZdcCZoiurKTRWiHCIo9s36dRP2yh0WsxpG92uF4kYIMWcwZe8jntL2vRHfUsHumcyexwfUCg78ULzOAPfU77coASfXyI6kb3OxjuRT3HsHQAwLdiQP7bQMq84PlikjMYCGeq2lsgGY2HAEwbBnBR8fvndtRVjqlZPaYMBoGGDv57AQQ/jlyGwpXi4D2arIXbjAugcDi0qXhb/JYIjyXaBGgFHzdArQH16v0PkeCvu7Tx6q8AAAAASUVORK5CYII="
+																														alt=""
+																														style="width: 24px; height: 33px; margin-right: 4px;">4G</span>
+																												</label>
+																											</div>
+																											<div class="ant-col ant-col-12">
+																												<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																													<span class="ant-checkbox ant-checkbox-checked">
+																														<input
+																															name="service_code_list"
+																															type="checkbox"
+																															class="ant-checkbox-input"
+																															value="43,45"
+																															checked="">
+																															<span class="ant-checkbox-inner"></span>
+																														</span>
+																														<span>
+																															<img
+																																src="data:image/png;base64,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"
+																																alt=""
+																																style="width: 24px; height: 33px; margin-right: 4px;">5G</span>
+																														</label>
+																													</div>
+																												</div>
+																											</div>
+																											<br></span>
+																										</div>
+																									</div>
+																								</div>
+																								<div
+																									class="ant-divider ant-divider-horizontal"
+																									role="separator"
+																									style="margin: 5px -10px;"></div>
+																								<div class="ant-row ant-form-item">
+																									<div class="ant-col ant-form-item-control-wrapper">
+																										<div class="ant-form-item-control">
+																											<span class="ant-form-item-children">
+																												<h3 style="margin-bottom: 0px; margin-top: 0px;">검색반경</h3>
+																												<div
+																													class="ant-radio-group ant-radio-group-solid ant-radio-group-small"
+																													style="display: flex;">
+																													<label
+																														class="ant-radio-button-wrapper ant-radio-button-wrapper-checked"
+																														style="flex: 1 1 0%; text-align: center;">
+																														<span class="ant-radio-button ant-radio-button-checked">
+																															<input
+																																name="visible_radius"
+																																type="radio"
+																																class="ant-radio-button-input"
+																																value="500"
+																																checked="">
+																																<span class="ant-radio-button-inner"></span>
+																															</span>
+																															<span>500m</span>
+																														</label>
+																														<label
+																															class="ant-radio-button-wrapper"
+																															style="flex: 1 1 0%; text-align: center;">
+																															<span class="ant-radio-button">
+																																<input
+																																	name="visible_radius"
+																																	type="radio"
+																																	class="ant-radio-button-input"
+																																	value="1000">
+																																	<span class="ant-radio-button-inner"></span>
+																																</span>
+																																<span>1km</span>
+																															</label>
+																														</div>
+																													</span>
+																												</div>
+																											</div>
+																										</div>
+																									</div>
+																									<div
+																										tabindex="0"
+																										role="presentation"
+																										style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+																								</div>
+																								<div
+																									role="tabpanel"
+																									aria-hidden="true"
+																									class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+																							</div>
+																							<div
+																								tabindex="0"
+																								role="presentation"
+																								style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+																						</div>
+																					</div>
+					</div>		
+					<!-- 2020-07-03 이유진 현재위치 -->
+					<div id="newRadioWrap">
+						<div class="newRadioAddress">
+							현재 위치 :서울특별시 중구 예장동</div>
+						<div class="newRadioMapButton">
+							<div style="display: inline-block; margin-right: 4px;">
+								<div class="ant-radio-group ant-radio-group-solid">
+									<label class="ant-radio-button-wrapper ant-radio-button-wrapper-checked">
+										<span class="ant-radio-button ant-radio-button-checked">
+											<input
+												type="radio"
+												class="ant-radio-button-input"
+												value="leaflet-vworld-base"
+												checked="">
+												<span class="ant-radio-button-inner"></span>
+											</span>
+											<span>일반지도</span>
+										</label>
+										<label class="ant-radio-button-wrapper">
+											<span class="ant-radio-button">
+												<input
+													type="radio"
+													class="ant-radio-button-input"
+													value="leaflet-vworld-satellite">
+													<span class="ant-radio-button-inner"></span>
+												</span>
+												<span>위성지도</span>
+											</label>
+										</div>
+									</div>
+									<div
+										class="toolbar-show-chart"
+										style="display: inline-block; margin-left: 0px; margin-right: 4px;"></div>
+									<!-- <div
+										class="toolbar-show-list"
+										style="display: inline-block; margin-left: 0px; margin-right: 4px;">
+										<div>
+											<button type="button" class="ant-btn">
+												<span>목록 보기</span>
+											</button>
+										</div>
+									</div> -->
+									<div
+										class="toolbar-show-help"
+										style="display: inline-block; margin-left: 0px; margin-right: 2px;"></div>
+								</div>
+					</div>
+				</ul>
+		</div>		
+	</header>
+	<div>
+		
+		<!-- 2020-07-06 이유진 무선국 상세페이지 -->
+		<div class="newRadioDetail">
+			<div class="ant-tabs ant-tabs-top ant-tabs-line">
+				
+			</div>
+			<div role="tablist" class="ant-tabs-bar ant-tabs-top-bar" tabindex="0">
+				
+				<div class="ant-tabs-nav-container">
+					<span
+						unselectable="unselectable"
+						class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled">
+						<span class="ant-tabs-tab-prev-icon">
+							<i
+								aria-label="icon: left"
+								class="anticon anticon-left ant-tabs-tab-prev-icon-target">
+								<svg
+									viewBox="64 64 896 896"
+									focusable="false"
+									class=""
+									data-icon="left"
+									width="1em"
+									height="1em"
+									fill="currentColor"
+									aria-hidden="true">
+									<path
+										d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path>
+								</svg>
+							</i>
+						</span>
+					</span>
+					<span
+						unselectable="unselectable"
+						class="ant-tabs-tab-next ant-tabs-tab-btn-disabled">
+						<span class="ant-tabs-tab-next-icon">
+							<i
+								aria-label="icon: right"
+								class="anticon anticon-right ant-tabs-tab-next-icon-target">
+								<svg
+									viewBox="64 64 896 896"
+									focusable="false"
+									class=""
+									data-icon="right"
+									width="1em"
+									height="1em"
+									fill="currentColor"
+									aria-hidden="true">
+									<path
+										d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+								</svg>
+							</i>
+						</span>
+					</span>
+					<div class="ant-tabs-nav-wrap">
+						<div class="ant-tabs-nav-scroll">
+							
+							<div class="ant-tabs-nav ant-tabs-nav-animated">
+
+								<div>
+									<div
+									role="tab"
+										aria-disabled="false"
+										aria-selected="true"
+										class="ant-tabs-tab-active ant-tabs-tab">2개의 무선국
+									</div>
+								</div>
+								<div
+								class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
+								style="display: block; transform: translate3d(0px, 0px, 0px); width: 113px;"></div>
+							</div>
+							
+							<!-- 2020-07-06 exit 버튼위치 수정 -->
+							<div class="ant-btn" style="float: right; margin: 10px;">
+								<img src="./img/exit.svg" alt="exit" style="width: 18px; height: 100%;">
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				tabindex="0"
+				role="presentation"
+				style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+			<div
+				class="ant-tabs-content ant-tabs-content-animated ant-tabs-top-content"
+				style="margin-left: 0%;">
+				<div
+					role="tabpanel"
+					aria-hidden="false"
+					class="ant-tabs-tabpane ant-tabs-tabpane-active">
+					<div
+						tabindex="0"
+						role="presentation"
+						style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+					<div
+						class="widget-table-clicked-collapse"
+						style="max-height: 400px; overflow-y: scroll;">
+						<span style="padding-left: 8px;">기지국(2)
+						</span>
+						<div class="ant-collapse ant-collapse-icon-position-right" style="margin: 5px;">
+							<div class="ant-collapse-item ant-collapse-item-active">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="true">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true"
+											style="transform: rotate(90deg);">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">1</span>32-2019-11-0071591</div>
+								<div class="ant-collapse-content ant-collapse-content-active">
+									<div class="ant-collapse-content-box">
+										<div>
+											<table>
+												<tbody>
+													<tr>
+														<th>허가번호</th>
+														<td>32-2019-11-0071591</td>
+													</tr>
+													<tr>
+														<th>국종</th>
+														<td>기지국</td>
+													</tr>
+													<tr>
+														<th>설(상)치장소</th>
+														<td>서울특별시 용산구 남산공원길
+														</td>
+													</tr>
+													<tr>
+														<th>용도</th>
+														<td>이동전화(5G-NR(3.5㎓))서비스 제공용(지상_기지국)</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true"
+											style="">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">2</span>32-2016-11-0008886</div>
+								<div class="ant-collapse-content ant-collapse-content-inactive" style="">
+									<div class="ant-collapse-content-box">
+										<div>
+											<table>
+												<tbody>
+													<tr>
+														<th>허가번호</th>
+														<td>32-2016-11-0008886</td>
+													</tr>
+													<tr>
+														<th>국종</th>
+														<td>기지국</td>
+													</tr>
+													<tr>
+														<th>설(상)치장소</th>
+														<td>서울특별시 용산구 남산공원길
+														</td>
+													</tr>
+													<tr>
+														<th>용도</th>
+														<td>이동전화(LTE)서비스 제공용(지상_기지국)</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- <button type="button" class="ant-btn" style="margin: 5px;">
+						<span>닫기</span>
+					</button> -->
+					<div
+						tabindex="0"
+						role="presentation"
+						style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+				</div>
+			</div>
+			<div
+				tabindex="0"
+				role="presentation"
+				style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+		</div>	 
+		<img src="./img/map.png" alt="" style="width: 100%;">
+	</div>
+</div>
+
+</body>
+</html>

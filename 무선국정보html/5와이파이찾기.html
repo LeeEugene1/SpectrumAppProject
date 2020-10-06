@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)http://localhost:8080/cop/bbs/selectBoardList.do?menuNo=10401&bbsId=BBSMSTR_000000000072&gubun=1&pageUnit=10&pageSize=4 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<title>무선국</title>
+
+<meta name="naver-site-verification" content="c78ee067d840dae93c07d6aecd84f982a4a142ff">
+<meta name="description" content="전파정보, 스펙트럼맵, 전파정보활용시스템, 한국방송통신전파진흥원, 주파수 이용현황, 무선국정보, 통계 ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="스펙트럼맵">
+<meta property="og:description" content="전파정보 개방시스템(전파누리)">
+<meta property="og:image" content="https://www.spectrummap.kr/images/kca/logo.png">
+<meta property="og:url" content="https://www.spectrummap.kr">
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:8080/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:8080/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:8080/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:8080/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="http://localhost:8080/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://www.spectrummap.kr/">
+<link type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/basic.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/common.css">
+<link type="text/css" rel="stylesheet" href="css/main.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/kca.css" media="screen">
+<link rel="stylesheet" href="css/chunk.css">
+<!-- <link type="text/css" rel="stylesheet" href="/css/msp/academy.css?ver=20200309"> -->
+<!-- <link type="text/css" rel="stylesheet" href="/css/com.css?ver=20200313" /> -->
+
+<script type="text/javascript" src="css/jquery.min.js"></script>
+<script type="text/javascript" src="css/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="css/responsiveslides.min.js"></script>
+<script type="text/javascript" src="css/common.js"></script>
+<script type="text/javascript" src="css/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="css/common.js(1)"></script>
+<script type="text/javascript" src="css/common_new.js"></script>
+
+<!-- <script type="text/javascript" src="/js/gis_common.js"></script> -->
+<script defer>
+	function newOption() {
+	  const wrap = document.getElementById("newSearchCondition");
+	  const text = document.getElementById("newText");
+	  if(wrap.style.display === "none"){
+		  wrap.style.display = "block";
+		  text.textContent="검색조건 접기";
+	  }else{
+		  wrap.style.display = "none";
+		  text.textContent="검색조건 펼치기";
+	  }
+	}
+ </script>
+</head>
+<body>
+<div id="wrap">
+	<header class="section" id="section0" style="border-top:0px;">
+		<!-- 2020-06-26 이유진 head 새로만듬 -->
+			<!-- 2020-06-26 이유진 top_menu 수정-->
+			<div class="top_menu">
+			<ul>
+				<li><a href="http://localhost:8080/mobile/m_index.do?submain=&amp;from=mobile#none" class="bf00 on" submain="1" onclick="homeBtn(); return false;"> &lt; </a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=1" class="bf01" submain="1">아카데미</a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=2" class="bf02" submain="2">주파수</a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=3" class="bf03" submain="3">무선국</a></li>
+				<li><a href="http://localhost:8080/index.do?from=mobile&amp;submain=4" class="bf04" submain="4">전파LAB</a></li>
+				<li><a href="" class="newTopMenuselected">전파한마당</a></li>
+			</ul>
+			</div>
+			<!-- 2020-07-02 이유진 2단메뉴 수정-->
+			<div class="new_menu2">
+				<ul>
+					<li class="newMenu2selected"><a href="">와이파이 찾기</a></li>
+				</ul>
+			</div>
+			<div class="new_search">
+				<ul>
+					<li onclick="newOption()"><a href="#" id="newText">검색조건 접기</a></li>
+					<!-- 2020-07-03 이유진 검색조건 -->
+			<div id="newSearchCondition">
+				<div>
+					<div>
+						<div style="margin: 0px 0px 10px;">
+							<div
+								class="ant-select-lg ant-select-lg ant-select-show-search ant-select-auto-complete ant-select ant-select-combobox ant-select-enabled"
+								style="width: 100%;">
+								<div
+									class="ant-select-selection
+										ant-select-selection--single"
+									role="combobox"
+									aria-autocomplete="list"
+									aria-haspopup="true"
+									aria-controls="0006b5ce-69ec-45af-94ed-3bc23a4ae37c"
+									aria-expanded="false">
+									<div class="ant-select-selection__rendered">
+										<div
+											unselectable="on"
+											class="ant-select-selection__placeholder"
+											style="display: block; user-select: none;">위치를 검색해주세요. (예시: 여의도 또는 여의도동)</div>
+										<ul>
+											<li class="ant-select-search ant-select-search--inline">
+												<div class="ant-select-search__field__wrap">
+													<span class="ant-select-search__field ant-input-affix-wrapper">
+														<input type="text" class="ant-input" value="">
+															<span class="ant-input-suffix">
+																<i
+																	aria-label="icon: search"
+																	class="anticon anticon-search certain-category-icon">
+																	<svg
+																		viewBox="64 64 896 896"
+																		focusable="false"
+																		class=""
+																		data-icon="search"
+																		width="1em"
+																		height="1em"
+																		fill="currentColor"
+																		aria-hidden="true">
+																		<path
+																			d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path>
+																	</svg>
+																</i>
+															</span>
+														</span>
+														<span class="ant-select-search__field__mirror">&nbsp;</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<span class="ant-select-arrow" unselectable="on" style="user-select: none;">
+											<i aria-label="icon: down" class="anticon anticon-down ant-select-arrow-icon">
+												<svg
+													viewBox="64 64 896 896"
+													focusable="false"
+													class=""
+													data-icon="down"
+													width="1em"
+													height="1em"
+													fill="currentColor"
+													aria-hidden="true">
+													<path
+														d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+												</svg>
+											</i>
+										</span>
+									</div>
+								</div>
+								<div
+									class="ant-radio-group ant-radio-group-outline"
+									style="text-align: right; width: 100%; margin-top: 5px;">
+									<label class="ant-radio-button-wrapper ant-radio-button-wrapper-checked">
+										<span class="ant-radio-button ant-radio-button-checked">
+											<input type="radio" class="ant-radio-button-input" value="address" checked="">
+												<span class="ant-radio-button-inner"></span>
+											</span>
+											<span>주소검색</span>
+										</label>
+										<label class="ant-radio-button-wrapper">
+											<span class="ant-radio-button">
+												<input type="radio" class="ant-radio-button-input" value="keyword">
+													<span class="ant-radio-button-inner"></span>
+												</span>
+												<span>명칭검색</span>
+											</label>
+										</div>
+									</div>
+									<div class="ant-row ant-form-item">
+										<div class="ant-col ant-form-item-control-wrapper">
+											<div class="ant-form-item-control">
+												<span class="ant-form-item-children">
+													<h3 style="margin-bottom: 0px; margin-top: 0px;">검색반경</h3>
+													<div
+														class="ant-radio-group ant-radio-group-solid ant-radio-group-small"
+														style="display: flex;">
+														<label
+															class="ant-radio-button-wrapper ant-radio-button-wrapper-checked"
+															style="flex: 1 1 0%; text-align: center;">
+															<span class="ant-radio-button ant-radio-button-checked">
+																<input
+																	name="visible_radius"
+																	type="radio"
+																	class="ant-radio-button-input"
+																	value="500"
+																	checked="">
+																	<span class="ant-radio-button-inner"></span>
+																</span>
+																<span>500m</span>
+															</label>
+															<label
+																class="ant-radio-button-wrapper"
+																style="flex: 1 1 0%; text-align: center;">
+																<span class="ant-radio-button">
+																	<input
+																		name="visible_radius"
+																		type="radio"
+																		class="ant-radio-button-input"
+																		value="1000">
+																		<span class="ant-radio-button-inner"></span>
+																	</span>
+																	<span>1km</span>
+																</label>
+															</div>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="ant-row ant-form-item">
+												<div class="ant-col ant-form-item-control-wrapper">
+													<div class="ant-form-item-control">
+														<span class="ant-form-item-children">
+															<h3 style="margin-bottom: 0px; margin-top: 0px;">와이파이 구분<div style="float: right; margin-left: auto;">
+																	<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																		<span class="ant-checkbox ant-checkbox-checked">
+																			<input type="checkbox" class="ant-checkbox-input" value="" checked="">
+																				<span class="ant-checkbox-inner"></span>
+																			</span>
+																			<span>전체 선택</span>
+																		</label>
+																	</div>
+																</h3>
+																<div class="ant-checkbox-group" name="wifi_code" style="width: 100%;">
+																	<div class="ant-row">
+																		<div class="ant-col ant-col-12">
+																			<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																				<span class="ant-checkbox ant-checkbox-checked">
+																					<input
+																						name="wifi_code"
+																						type="checkbox"
+																						class="ant-checkbox-input"
+																						value="공공,지자체"
+																						checked="">
+																						<span class="ant-checkbox-inner"></span>
+																					</span>
+																					<span>
+																						<img
+																							src="data:image/png;base64,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"
+																							alt=""
+																							style="width: 24px; height: 33px; margin-right: 4px;">공공 WIFI</span>
+																					</label>
+																				</div>
+																				<div class="ant-col ant-col-12">
+																					<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
+																						<span class="ant-checkbox ant-checkbox-checked">
+																							<input
+																								name="wifi_code"
+																								type="checkbox"
+																								class="ant-checkbox-input"
+																								value="SKT,KT,LGT"
+																								checked="">
+																								<span class="ant-checkbox-inner"></span>
+																							</span>
+																							<span>
+																								<img
+																									src="data:image/png;base64,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"
+																									alt=""
+																									style="width: 24px; height: 33px; margin-right: 4px;">통신사 WIFI</span>
+																							</label>
+																						</div>
+																					</div>
+																				</div>
+																				<br></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+			</div>
+					<!-- 2020-07-03 이유진 현재위치 -->
+					<div id="newRadioWrap">
+						<div class="newRadioAddress">
+							현재 위치 :서울특별시 중구 예장동</div>
+						<div class="newRadioMapButton">
+							<div style="display: inline-block; margin-right: 4px;">
+								<div class="ant-radio-group ant-radio-group-solid">
+									<label class="ant-radio-button-wrapper ant-radio-button-wrapper-checked">
+										<span class="ant-radio-button ant-radio-button-checked">
+											<input
+												type="radio"
+												class="ant-radio-button-input"
+												value="leaflet-vworld-base"
+												checked="">
+												<span class="ant-radio-button-inner"></span>
+											</span>
+											<span>일반지도</span>
+										</label>
+										<label class="ant-radio-button-wrapper">
+											<span class="ant-radio-button">
+												<input
+													type="radio"
+													class="ant-radio-button-input"
+													value="leaflet-vworld-satellite">
+													<span class="ant-radio-button-inner"></span>
+												</span>
+												<span>위성지도</span>
+											</label>
+										</div>
+									</div>
+									<div
+										class="toolbar-show-chart"
+										style="display: inline-block; margin-left: 0px; margin-right: 4px;"></div>
+									<!-- <div
+										class="toolbar-show-list"
+										style="display: inline-block; margin-left: 0px; margin-right: 4px;">
+										<div>
+											<button type="button" class="ant-btn">
+												<span>목록 보기</span>
+											</button>
+										</div>
+									</div> -->
+									<div
+										class="toolbar-show-help"
+										style="display: inline-block; margin-left: 0px; margin-right: 2px;"></div>
+								</div>
+					</div>
+				</ul>
+		</div>		
+	</header>
+	<div>
+		
+		<!-- 2020-07-06 이유진 무선국 상세페이지 -->
+	<div class="newRadioDetail">
+		<div class="ant-tabs ant-tabs-top ant-tabs-line">
+			<div role="tablist" class="ant-tabs-bar ant-tabs-top-bar" tabindex="0">
+				<div class="ant-tabs-nav-container">
+					<span
+						unselectable="unselectable"
+						class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled">
+						<span class="ant-tabs-tab-prev-icon">
+							<i
+								aria-label="icon: left"
+								class="anticon anticon-left ant-tabs-tab-prev-icon-target">
+								<svg
+									viewBox="64 64 896 896"
+									focusable="false"
+									class=""
+									data-icon="left"
+									width="1em"
+									height="1em"
+									fill="currentColor"
+									aria-hidden="true">
+									<path
+										d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path>
+								</svg>
+							</i>
+						</span>
+					</span>
+					<span
+						unselectable="unselectable"
+						class="ant-tabs-tab-next ant-tabs-tab-btn-disabled">
+						<span class="ant-tabs-tab-next-icon">
+							<i
+								aria-label="icon: right"
+								class="anticon anticon-right ant-tabs-tab-next-icon-target">
+								<svg
+									viewBox="64 64 896 896"
+									focusable="false"
+									class=""
+									data-icon="right"
+									width="1em"
+									height="1em"
+									fill="currentColor"
+									aria-hidden="true">
+									<path
+										d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+								</svg>
+							</i>
+						</span>
+					</span>
+					<div class="ant-tabs-nav-wrap">
+						<div class="ant-tabs-nav-scroll">
+							<div class="ant-tabs-nav ant-tabs-nav-animated">
+								<div>
+									<div
+										role="tab"
+										aria-disabled="false"
+										aria-selected="true"
+										class="ant-tabs-tab-active ant-tabs-tab">11개의 와이파이
+									</div>
+								</div>
+								<div
+									class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
+									style="display: block; transform: translate3d(0px, 0px, 0px); width: 135px;"></div>
+							</div>
+							<!-- 2020-07-07 exit 버튼위치 수정 -->
+							<div class="ant-btn" style="float: right; margin: 10px;">
+								<img src="./img/exit.svg" alt="exit" style="width: 18px; height: 100%;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				tabindex="0"
+				role="presentation"
+				style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+			<div
+				class="ant-tabs-content ant-tabs-content-animated ant-tabs-top-content"
+				style="margin-left: 0%;">
+				<div
+					role="tabpanel"
+					aria-hidden="false"
+					class="ant-tabs-tabpane ant-tabs-tabpane-active">
+					<div
+						tabindex="0"
+						role="presentation"
+						style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+					<div
+						class="widget-table-clicked-collapse"
+						style="max-height: 400px; overflow-y: scroll;">
+						<div class="ant-collapse ant-collapse-icon-position-right" style="margin: 5px;">
+							<div class="ant-collapse-item ant-collapse-item-active">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="true">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true"
+											style="transform: rotate(90deg);">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">1</span>강남구민회관</div>
+								<div class="ant-collapse-content ant-collapse-content-active">
+									<div class="ant-collapse-content-box">
+										<table>
+											<tbody>
+												<tr>
+													<th>와이파이명</th>
+													<td>강남구민회관</td>
+												</tr>
+												<tr>
+													<th>제공기관</th>
+													<td>KT</td>
+												</tr>
+												<tr>
+													<th>설치 장소</th>
+													<td>서울 강남구 대치동 509-2 509-2</td>
+												</tr>
+												<tr>
+													<th>용도지역정보</th>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">2</span>강남구 자체 설치 와이파이존</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">3</span>강남구청 구민회관</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">4</span>PUBLIC_WIFI</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">5</span>PUBLIC_WIFI</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">6</span>PUBLIC_WIFI</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">7</span>PUBLIC_WIFI</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">8</span>PUBLIC_WIFI</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">9</span>PUBLIC_WIFI</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">10</span>PUBLIC_WIFI</div>
+							</div>
+							<div class="ant-collapse-item">
+								<div
+									class="ant-collapse-header"
+									role="button"
+									tabindex="0"
+									aria-expanded="false">
+									<i aria-label="icon: right" class="anticon anticon-right ant-collapse-arrow">
+										<svg
+											viewBox="64 64 896 896"
+											focusable="false"
+											class=""
+											data-icon="right"
+											width="1em"
+											height="1em"
+											fill="currentColor"
+											aria-hidden="true">
+											<path
+												d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path>
+										</svg>
+									</i>
+									<span class="ant-tag">11</span>PUBLIC_WIFI</div>
+							</div>
+						</div>
+					</div>
+					<!-- <button type="button" class="ant-btn" style="margin: 5px;">
+						<span>닫기</span>
+					</button> -->
+					<!-- 2020-07-07 exit 버튼위치 수정 -->
+
+					<div
+						tabindex="0"
+						role="presentation"
+						style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+				</div>
+			</div>
+			<div
+				tabindex="0"
+				role="presentation"
+				style="width: 0px; height: 0px; overflow: hidden; position: absolute;"></div>
+		</div>
+	</div>
+		<img src="./img/map.png" alt="" style="width: 100%;">
+	</div>
+</div>
+
+</body>
+</html>

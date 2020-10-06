@@ -1,0 +1,221 @@
+// Tab Content
+function initTabMenu(tabContainerID) {
+	var tabContainer = document.getElementById(tabContainerID);
+	var tabAnchor = tabContainer.getElementsByTagName("a");
+	var i = 0;
+
+	for(i=0; i<tabAnchor.length; i++) {
+		if (tabAnchor.item(i).className == "tab")
+			thismenu = tabAnchor.item(i);
+		else
+			continue;
+
+		thismenu.container = tabContainer;
+		thismenu.targetEl = document.getElementById(tabAnchor.item(i).href.split("#")[1]);
+		thismenu.targetEl.style.display = "none";
+		thismenu.imgEl = thismenu.getElementsByTagName("img").item(0);
+		if (thismenu.imgEl) {
+			thismenu.onclick = function () {
+				//this.onclick();
+			}
+		}
+		thismenu.onclick = tabMenuClick;
+		thismenu.onfocus = tabMenuClick;
+		
+		if (!thismenu.container.first)
+			thismenu.container.first = thismenu;
+	}
+	tabContainer.first.onclick();
+}
+
+function tabMenuClick() {
+	currentmenu = this.container.current;
+	if (currentmenu != this) {
+		if (currentmenu) {
+			currentmenu.targetEl.style.display = "none";
+			if (currentmenu.imgEl) {
+				currentmenu.imgEl.src = currentmenu.imgEl.src.replace("_on.gif", ".gif");
+			} else {
+				currentmenu.className = currentmenu.className.replace("tab on", "tab");
+			}
+		}
+
+		this.targetEl.style.display = "block";
+		if (this.imgEl) {
+			this.imgEl.src = this.imgEl.src.replace(".gif", "_on.gif");
+		} else {
+			this.className += " on";
+		}
+		this.container.current = this;
+	}
+	return false;
+}
+
+// 이미지 롤오버
+function over(obj,type){
+    if(type) obj.src = obj.src.replace(".gif","_on.gif");
+    else  obj.src = obj.src.replace("_on.gif",".gif");
+}
+
+// 팝업
+function pop(url,name,w,h){ window.open(url,name,'width='+w+',height='+h+',scrollbars=no,status=1'); } //Popup(스크롤바없음)
+function pops(url,name,w,h){ window.open(url,name,'width='+w+',height='+h+',scrollbars=yes'); } //Popup(스크롤바있음)
+function newwin(url){ window.open(url,'new','location=1,directories=1,resizable=1,status=1,toolbar=1,menubar=1,scrollbars=1') } //NewPopup(스크롤바없음)
+
+//IE 배경 캐시
+try {document.execCommand('BackgroundImageCache', false, true);} catch(e) {}
+
+//빠른서비스
+QuickMenu = function(element, startPoint, endPoint) {
+	var STATICMENU = element;
+	var stmnScrollSpeed = 1;
+	var stmnTimer;
+	
+	RefreshStaticMenu = function ()
+	{
+		var stmnStartPoint = parseInt(STATICMENU.style.top, 10);
+		var stmnEndPoint = parseInt(document.documentElement.scrollTop, 10)+endPoint;
+		var stmnRefreshTimer = 1;
+		
+		if ( stmnStartPoint != stmnEndPoint ) {
+				stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 17 );
+				STATICMENU.style.top = parseInt(STATICMENU.style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + "px";
+				stmnRefreshTimer = stmnScrollSpeed;
+		}
+		stmnTimer = setTimeout ("RefreshStaticMenu();", stmnRefreshTimer);
+	}
+	
+	this.InitializeStaticMenu = function ()
+	{
+			STATICMENU.style.top = startPoint + "px";
+			RefreshStaticMenu();
+	}
+}
+
+// 레이어 노출
+function stdShow(id) {
+	document.getElementById(id).style.display = "block";
+}
+function stdHidden(id) {
+	document.getElementById(id).style.display = "none";
+}
+function selshow(tar, obj){
+	var tarid = document.getElementById(tar);
+	var objid = document.getElementById(obj);
+	objid.style.display = "block";
+	tarid.onmouseout = objid.onmouseout = function(){
+		objid.style.display = 'none';
+	}
+}
+
+/* 레이어 오버 */
+function viewLayer(id) {
+	$('#'+id).css('display','block');
+}
+function hideLayer(id) {
+	$('#'+id).css('display','none');
+}
+
+//FAQ
+function toggleList(tabContainer) {
+	var tabContainer=document.getElementById(tabContainer)
+	var triggers = tabContainer.getElementsByTagName("a");
+
+	for(i = 0; i < triggers.length; i++) {
+		if (triggers.item(i).href.split("#")[1])
+			triggers.item(i).targetEl = document.getElementById(triggers.item(i).href.split("#")[1]);
+
+		if (!triggers.item(i).targetEl)
+			continue;
+
+		triggers.item(i).targetEl.style.display = "none";
+		triggers.item(i).className="";
+		triggers.item(i).onclick = function () {
+			if (tabContainer.current == this) {
+				this.targetEl.style.display = "none";
+				this.className="";
+				tabContainer.current = null;
+			} else {
+				if (tabContainer.current) {
+					tabContainer.current.targetEl.style.display = "none";
+					tabContainer.current.className="";
+				}
+				this.targetEl.style.display = "block";
+				this.className="on";
+				tabContainer.current = this;
+			}
+			return false;
+		}
+	}
+	//triggers.item(0).targetEl.style.display = "block";
+}
+
+if (!jQuery.browser) {
+    jQuery.browser = {
+        msie: navigator.userAgent.indexOf('MSIE') > 0
+    }
+}
+
+function formatFreqRange(start, end) {
+    var UNITS = ['Hz', 'kHz', 'MHz', 'GHz', 'THz'];
+    var s = +start, e = +end, unit = 0;
+    for (var i = 0; i < UNITS.length; ++i) {
+        if (s < 1000 || e < 1000) {
+            return s + UNITS[unit] + ' ~ ' + e + UNITS[unit];
+        }
+        s /= 1000;
+        e /= 1000;
+        unit++;
+    }
+    
+    return '';
+}
+
+function nvl(val, ch){
+	var rtn = val;
+	if (!val || val == 'undefined' || val == 'NaN' || val == 'null') {
+		rtn = ch;
+	}
+	return rtn;
+}
+
+function zeroToNull(val){
+	if (val == '0' || val == 0) {
+		return '';
+	}
+	return val;
+}
+
+// 기본 validation 체크.
+function validChk(id, msg){
+	var tId = id;
+	if($.trim($(tId).val()) == ''){
+		//alert(msg +"이 입력되지 않았습니다.");
+		alert("필수입력 항목("+ msg +") 입니다.");
+		$(tId).focus();
+		return false;
+	}
+	return true;
+}
+
+// 공통팝업 중앙에 띄우기 url,winName,width,height
+function popUpCenter(url,winName,width,height,option){
+	var winWidth = width;
+	var winHeight = height;
+	var winURL = url;
+	var winPosLeft = (screen.width - winWidth) / 2;
+	var winPosTop = (screen.height - winHeight) / 2;
+	var winOpt = "width="+winWidth+",height="+winHeight+",top="+winPosTop+",left="+winPosLeft;
+	option && (winOpt = winOpt +"," + option);
+	var pop_status = window.open(winURL, winName, winOpt);
+	pop_status.focus();
+	return pop_status;
+}
+
+// 숫자형에 콤마표시하여 리턴
+function commify(n) {
+	var reg = /(^[+-]?\d+)(\d{3})/;		// 정규식
+	n += '';										// 숫자를 문자열로 변환
+	while (reg.test(n)) n = n.replace(reg, '$1' + ',' + '$2');
+	return n;
+}
