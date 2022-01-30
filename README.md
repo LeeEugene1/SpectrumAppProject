@@ -17,6 +17,6 @@
 
 ![웹 1920 – 5](https://user-images.githubusercontent.com/59987309/95176731-3ce73000-07f8-11eb-93a1-412e239a63d3.png)
 
-실제 사이트: <a href="https://spectrummap.kr/mobile/m_index.do?submain=&from=">전파누리 모바일 버전</a></p>
+실제 사이트: <a href="https://spectrummap.kr/mobile/m_index.do?submain=&from=">전파누리 모바일 버전 개발자모드로 확인가능(단축키 F12(윈도우), cmd+shift+i(맥 OS))</a></p>
 --
 연락: <a href="mailto:happyHackingEugene@gmail@gmail.com">happyHackingEugene@gmail.com</a></p>
